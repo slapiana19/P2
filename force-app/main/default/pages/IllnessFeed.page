@@ -1,0 +1,26 @@
+<apex:page controller="IllnessFeedController">
+    
+    <!--
+<apex:pageBlockTable value="{!Illnesses}" var="Illness">
+<apex:column value="{!Illness.Name}" />
+<apex:outputText value="{!SelectedIllness}"/>
+</apex:pageBlockTable>
+<!--
+<apex:pageBlockButtons location="bottom">
+<apex:commandButton action="{!getDoctors}" value="View Feed"/>
+</apex:pageBlockButtons>
+-->
+    
+    <apex:pageBlock title="Feed Topic" >
+        <apex:form >
+            <apex:selectList value="{!SelectedIllnessName}" multiselect="false">
+                <apex:actionSupport event="onchange"  rerender="Feed"/>
+                <apex:selectOptions value="{!IllnessNames}"/>
+            </apex:selectList>
+        </apex:form>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Feed">
+        <chatter:feed entityId="{!SelectedIllness.Id}" ID="Feed"/>
+    </apex:pageBlock>
+</apex:page>

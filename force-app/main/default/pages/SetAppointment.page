@@ -1,0 +1,15 @@
+<apex:page docType="html-5.0" standardController="Appointment__c">
+    <apex:form >
+    	<apex:pageBlock title="Set An Appointment">
+            <apex:pageBlockSection >
+                <apex:inputField value="{!Appointment__c.Name}" label="Appointment Name" />
+                <apex:inputField value="{!Appointment__c.Date_and_Time__c}" label="Date/Time" />
+            <apex:inputField value="{!Appointment__c.Doctor__c}" label="Doctor" />
+
+            </apex:pageBlockSection>
+        	<apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!Save}" value="Save"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

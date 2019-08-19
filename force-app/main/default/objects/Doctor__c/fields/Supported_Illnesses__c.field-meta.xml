@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supported_Illnesses__c</fullName>
+    <externalId>false</externalId>
+    <label>Supported Illnesses</label>
+    <required>true</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Flu</fullName>
+                <default>false</default>
+                <label>Flu</label>
+            </value>
+            <value>
+                <fullName>Cold</fullName>
+                <default>false</default>
+                <label>Cold</label>
+            </value>
+            <value>
+                <fullName>Fever</fullName>
+                <default>false</default>
+                <label>Fever</label>
+            </value>
+            <value>
+                <fullName>Skin Condition</fullName>
+                <default>false</default>
+                <label>Skin Condition</label>
+            </value>
+            <value>
+                <fullName>Cancer</fullName>
+                <default>false</default>
+                <label>Cancer</label>
+            </value>
+            <value>
+                <fullName>Gastrointestinal Illnesses</fullName>
+                <default>false</default>
+                <label>Gastrointestinal Illnesses</label>
+            </value>
+            <value>
+                <fullName>Vertigo</fullName>
+                <default>false</default>
+                <label>Vertigo</label>
+            </value>
+            <value>
+                <fullName>Headaches</fullName>
+                <default>false</default>
+                <label>Headaches</label>
+            </value>
+            <value>
+                <fullName>Eye Care</fullName>
+                <default>false</default>
+                <label>Eye Care</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

@@ -1,0 +1,23 @@
+<apex:page standardController="Illness__c" recordSetVar="Illnesses">
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!Illnesses}" var="Illness">
+            <apex:column value="{!Illness.Name}"/>
+            <apex:column >
+              <!--  <apex:commandButton value="View Feed" action="{!setFeed}" rerender="all">
+                    <apex:param name="illnessId" value="{!cont.id}" assignTo="{!contIdChosen}"/>
+                </apex:commandButton> -->
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <!--
+    <apex:form>
+            <apex:selectList value="{!Illnesses}" multiselect="false">
+                <apex:selectOptions value="{!Illness}"/>
+            </apex:selectList><p/>     
+            <apex:commandButton value="" action="{!test}" rerender="out" status="status"/> 
+        
+    </apex:form>
+-->
+  <!--  <chatter:feed entityId="{!Illness__c.Id}" /> -->
+    
+</apex:page>
