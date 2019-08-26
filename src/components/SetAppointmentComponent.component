@@ -1,0 +1,30 @@
+<apex:component controller="DoctorAndAppointmentController">
+     <apex:form >
+        <apex:pageBlock title="Set An Appointment">
+            <apex:pageBlockSection >
+                <apex:input value="{!appointmentName}" label="Appointment Name" />
+                <apex:input value="{!appointmentDate}" label="Date" />
+                <apex:input value="{!appointmentTime}" label="Time" />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!saveAppointment}" value="Save"/> 
+            </apex:pageBlockButtons>
+            <p onclick="callSaveAppointment();">
+                Click Me
+            </p>
+        </apex:pageBlock>
+         <apex:actionFunction action="{!saveAppointment}" name="callSaveAppointment"/>
+    </apex:form>
+    
+    <apex:outputPanel onclick="saveActionFunction" styleClass="btn">
+        Save Appointment
+    </apex:outputPanel>
+   
+    <apex:form >
+    <apex:actionFunction action="{!saveAppointment}" name="saveActionFunction" rerender="showstate">
+       <!-- <apex:param name="firstParam" assignTo="{!state}" value="" /> -->
+    </apex:actionFunction>
+    </apex:form>
+
+    
+</apex:component>

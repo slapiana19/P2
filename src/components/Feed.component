@@ -1,0 +1,6 @@
+<apex:component >
+    
+    <apex:attribute name="IllnessId" type="Id" description="The id of the feed displayed"/>
+    <chatter:feed entityId="{!IllnessId}" ID="Feed"/>
+        
+</apex:component>

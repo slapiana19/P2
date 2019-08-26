@@ -1,0 +1,11 @@
+<apex:page controller="IllnessFeedController">
+    
+    <apex:form >
+        
+        <apex:commandButton action="{!exitFeed}" value="Return to Illnesses"/>
+    
+        </apex:form>
+    <apex:pageBlock title="{!SelectedIllness.Name}">
+    <c:Feed IllnessId="{!SelectedIllness.Id}"/>
+    </apex:pageBlock>
+</apex:page>

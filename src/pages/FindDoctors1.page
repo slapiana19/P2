@@ -1,0 +1,60 @@
+<apex:page controller="DoctorAndAppointmentController" docType="html-5.0">
+    
+    <apex:stylesheet value="{!$Resource.StyleSheet}"/>
+    <apex:form >
+        
+        <apex:pageBlock TITLE="Please Enter the name of your doctor">
+            
+            <apex:pageBlockSection >
+                <apex:input type="text" value="{!doctorName}" label="Doctor Name : "/>
+                <apex:input type="text" value="{!cityName}" label="City : "/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!getDoctors}" value="Find doctors"/>
+            </apex:pageBlockButtons>
+        
+        </apex:pageBlock>
+    
+    
+    </apex:form>
+    
+    
+    
+    
+    <apex:form >
+    <apex:pageBlock title="Select Doctor" >
+        
+            <apex:selectList value="{!selectedDoctorName}" multiselect="false">
+                <apex:actionSupport event="onchange"  rerender="Feed"/>
+                <apex:selectOptions value="{!doctorNames}"/>
+            </apex:selectList>
+            <apex:commandButton action="{!makeAppointment}" value="Make Appointment"/>
+        
+    </apex:pageBlock>
+    </apex:form>
+    <!--    <c:SetAppointmentComponent rendered="{!settingAppointment}"/> -->
+    
+    
+    
+    
+    
+        <apex:form >
+        <apex:pageBlock title="Set An Appointment" rendered="{!settingAppointment}">
+            
+            <apex:pageBlockSection >
+                <apex:input value="{!appointmentName}" label="Appointment Name" />
+                <apex:input value="{!appointmentDate}" label="Date" type="date"/>
+                <apex:input value="{!appointmentTime}" label="Time" type="time"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!saveAppointment}" value="Save"/> 
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+       
+        
+    </apex:form>   
+      
+</apex:page>

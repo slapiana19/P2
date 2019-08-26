@@ -1,0 +1,16 @@
+<apex:page controller="IllnessFeedController">
+    
+ 
+    
+    <apex:pageBlock title="Feed Topic" >
+        <apex:form >
+            <apex:selectList value="{!SelectedIllnessName}" multiselect="false">
+                <apex:actionSupport event="onchange"  rerender="Feed"/>
+                <apex:selectOptions value="{!IllnessNames}"/>
+            </apex:selectList>
+            <apex:commandButton action="{!enterFeed}" value="View Feed"/>
+        </apex:form>
+    </apex:pageBlock>
+    
+   
+</apex:page>

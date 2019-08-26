@@ -1,0 +1,22 @@
+<apex:page docType="html-5.0" standardController="Appointment__c" extensions="GetParam" tabStyle="SetanAppointment__tab">
+    
+    <apex:form >
+        <apex:pageBlock title="Set An Appointment">
+            <apex:pageBlockSection >
+                <apex:inputField value="{!Appointment__c.Name}" label="Appointment Name" />
+                <apex:inputField value="{!Appointment__c.Date__c}" label="Date" />
+                <apex:inputField value="{!Appointment__c.Time__c}" label="Time" />
+                <!--<apex:outputText value="{!name}" label="Doctor" />-->
+                <apex:inputField value="{!Appointment__c.Doctor__c}" onfocus="{!name}" onkeypress="{!name}"/>
+                
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!Save}" value="Save"/>
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+    </apex:form>
+    
+    
+</apex:page>

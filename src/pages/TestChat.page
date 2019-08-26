@@ -1,0 +1,12 @@
+<apex:page >
+            <a id="liveagent_button_online_5733i0000004hpC" href="javascript://Chat" style="display: none;" onclick="liveagent.startChat('5733i0000004hpC')">Im here</a><div id="liveagent_button_offline_5733i0000004hpC" style="display: none;">Not here</div><script type="text/javascript">
+        if (!window._laq) { window._laq = []; }
+        window._laq.push(function(){liveagent.showWhenOnline('5733i0000004hpC', document.getElementById('liveagent_button_online_5733i0000004hpC'));
+                                    liveagent.showWhenOffline('5733i0000004hpC', document.getElementById('liveagent_button_offline_5733i0000004hpC'));
+                                   });</script>
+        
+        <script type='text/javascript' src='https://c.la4-c2-ph2.salesforceliveagent.com/content/g/js/46.0/deployment.js'></script>
+        <script type='text/javascript'>
+            liveagent.init('https://d.la4-c2-ph2.salesforceliveagent.com/chat', '5723i0000004hLO', '00D3i000000s19u');
+        </script>
+</apex:page>
